@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass {
+    @apply bg-navy/20 backdrop-blur-xl border border-glass-border;
+  }
+  
+  .glass-card {
+    @apply bg-graphite-light/30 backdrop-blur-3xl border border-glass-border shadow-[0_16px_40px_-10px_rgba(0,0,0,0.6)] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)];
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan via-white to-emerald;
+  }
+  
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold via-white to-gold/70;
+  }
+  
+  .heading-cinematic {
+    @apply font-clash font-semibold text-white leading-tight tracking-[-0.02em];
+  }
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #00f0ff #09090b;
+}
+
+body {
+  @apply bg-graphite text-gray-300 font-satoshi antialiased selection:bg-cyan selection:text-graphite;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00f0ff;
+  border-radius: 10px;
+}
+
+/* Background grid pattern */
+.bg-grid {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
